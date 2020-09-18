@@ -1,6 +1,7 @@
 #!/bin/sh
-# 参数格式: "localhost1:2181#test1,localhost2:2181#test2,localhost3:2181#test3"
-# eg: ./30_zookeeper_check_health.sh "localhost1:2181,localhost2:2181,localhost3:2181"
+# 参数格式: "localhost1:2181#test1,localhost2:2181#test2,localhost3:2181#test3" 
+# 即: host:port#note
+# eg: ./30_zookeeper_check_health.sh "localhost1:2181#test1,localhost2:2181#test2,localhost3:2181#test3"
 zk_list=(${1//,/ })
 length=${#zk_list[@]}
 zero=0
